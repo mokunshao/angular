@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from './models/post.model';
+import { posts } from './posts';
 
 @Component({
   selector: 'app-post',
@@ -8,8 +9,11 @@ import { Post } from './models/post.model';
 })
 export class PostComponent implements OnInit {
   title = '123';
-  entities = [{ id: 1, title: 'hello', body: '123456789' }, { id: 2, title: 'hola', body: '54321' }, { id: 3, title: '你好' }];
-  constructor() { }
+  entities: Post[];
+
+  constructor() {
+    this.entities = posts;
+  }
 
   ngOnInit() {
   }
