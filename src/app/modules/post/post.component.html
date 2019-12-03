@@ -1,12 +1,4 @@
-<p>post works!</p>
 <div>{{title}}</div>
 <ul>
-  <li *ngFor="let entity of entities; index as i">
-    <!-- <li *ngFor="let entity of entities;let i = index"> -->
-    <h4><a [title]="entity.title" [textContent]="entity.title"></a></h4>
-    <p *ngIf="entity.body">{{entity.body}}</p>
-    <p>
-      <button (click)="removeItem(i)">Remove</button>
-    </p>
-  </li>
+  <app-post-item *ngFor="let entity of entities; index as i" [entity]="entity"></app-post-item>
 </ul>
