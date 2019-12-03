@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent implements OnInit {
-
+  title = '123';
+  entities = [{ title: 'hello', body: '123456789' }, { title: 'hola', body: '54321' }, { title: '你好' }];
   constructor() { }
 
   ngOnInit() {
