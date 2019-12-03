@@ -13,4 +13,7 @@ export class PostComponent implements OnInit {
   ngOnInit() {
   }
 
+  removeItem(i: number) {
+    this.entities = this.entities.filter((item, index) => index !== i);
+  }
 }
