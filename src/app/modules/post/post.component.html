@@ -1,4 +1,5 @@
 <div>{{title}}</div>
 <ul>
-  <app-post-item *ngFor="let entity of entities; index as i" [entity]="entity"></app-post-item>
+  <app-post-item *ngFor="let entity of entities; index as i" [entity]="entity" (remove)="removeItem($event)">
+  </app-post-item>
 </ul>
